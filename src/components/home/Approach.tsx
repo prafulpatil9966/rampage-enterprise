@@ -11,7 +11,7 @@ export function Approach() {
   const step = approachSteps[active];
 
   return (
-    <section id="approach" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+    <section id="approach" className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-32">
       <Reveal>
         <SectionHeading
           label="03 / How We Work"

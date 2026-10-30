@@ -6,6 +6,9 @@ export const company = {
   tagline: "Security is not an option. It's a standard.",
   description:
     "Integrated security, surveillance and professional protection solutions designed to help safeguard the spaces that matter.",
+  // From the official Instagram bio (@rampage.enterprise).
+  bio: "Where safety meets service. Redefining security in physical vigilance and digital surveillance.",
+  instagram: "https://www.instagram.com/rampage.enterprise/",
 };
 
 // Placeholders — replace with verified business details before launch.
@@ -13,6 +16,7 @@ export const contactInfo = {
   phone: "+91 9167885599",
   email: "Add verified email address",
   address: "Mumbai, Maharashtra, India",
+  instagram: "https://www.instagram.com/rampage.enterprise/",
 };
 
 export const navLinks = [
@@ -31,48 +35,58 @@ export type Service = {
   image: string;
 };
 
+// Services list matches the official "Services Offered" roster shared on Instagram.
 export const services: Service[] = [
-   {
+  {
     number: "01",
+    slug: "manned-guarding",
+    title: "Manned Guarding",
+    description: "Trained guards stationed on-site for round-the-clock protection.",
+    image:
+      "https://images.unsplash.com/photo-1552622594-f27a9f6103a3?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    number: "02",
     slug: "event-security",
     title: "Event Security",
     description: "Security support for events and gatherings.",
     image:
       "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=1600&auto=format&fit=crop",
-  }, 
-  {
-    number: "02",
-    slug: "club-security",
-    title: "Club Security",
-    description: "Security services for clubs and entertainment venues.",
-    image:
-      "https://images.unsplash.com/photo-1690992375579-0a91942e9dc3?q=80&w=1600&auto=format&fit=crop",
   },
   {
     number: "03",
-    slug: "cctv-surveillance",
-    title: "CCTV & Surveillance",
-    description: "Professional CCTV installation and surveillance solutions.",
-    image:
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1600&auto=format&fit=crop",
-  },
-  {
-    number: "04",
-    slug: "security-personnel",
-    title: "Security Personnel",
-    description: "Security personnel for different security requirements.",
+    slug: "residential-security",
+    title: "Residential Security",
+    description: "Security services for residential societies.",
     image:
       "https://images.unsplash.com/photo-1793027516573-e54903e6aa68?q=80&w=1600&auto=format&fit=crop",
   },
   {
-    number: "05",
-    slug: "society-security",
-    title: "Society Security",
-    description: "Security services for residential societies.",
+    number: "04",
+    slug: "corporate-security",
+    title: "Corporate Security",
+    description: "Security services for offices and commercial spaces.",
     image:
-      "https://images.unsplash.com/photo-1775990366475-cc8de2cadfa1?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543892607-04657ef3a279?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    number: "05",
+    slug: "retail-security",
+    title: "Retail Security",
+    description: "Security services for retail stores and shopping spaces.",
+    image:
+      "https://images.unsplash.com/photo-1694715641112-755248c25d5b?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    number: "06",
+    slug: "cctv-monitoring",
+    title: "CCTV Monitoring",
+    description: "Professional CCTV installation, monitoring and maintenance.",
+    image:
+      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1600&auto=format&fit=crop",
   },
 ];
+
 
 export type ApproachStep = {
   number: string;

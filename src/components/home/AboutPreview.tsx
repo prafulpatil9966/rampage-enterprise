@@ -6,7 +6,7 @@ import { company } from "@/lib/content";
 
 export function AboutPreview() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+    <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-32">
       <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 lg:items-center">
         <Reveal className="relative order-2 aspect-[4/5] overflow-hidden rounded-[2rem] lg:order-1">
           <Image

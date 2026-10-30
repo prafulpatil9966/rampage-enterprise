@@ -11,6 +11,14 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-grey">
               {company.description}
             </p>
+            <a
+              href={company.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-semibold text-taupe transition-colors hover:text-taupe-dark"
+            >
+              @rampage.enterprise on Instagram
+            </a>
           </div>
 
           <div>

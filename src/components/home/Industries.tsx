@@ -5,7 +5,7 @@ import { spaces } from "@/lib/content";
 
 export function Industries() {
   return (
-    <section className="bg-beige py-24 lg:py-32">
+    <section className="bg-beige py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <SectionHeading

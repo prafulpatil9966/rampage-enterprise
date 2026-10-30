@@ -5,7 +5,7 @@ import { contactInfo } from "@/lib/content";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-ink py-24 text-cream lg:py-32">
+    <section id="contact" className="bg-ink py-20 text-cream lg:py-32">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <Reveal>
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-taupe">

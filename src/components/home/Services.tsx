@@ -5,7 +5,7 @@ import { services } from "@/lib/content";
 
 export function Services() {
   return (
-    <section className="bg-beige py-24 lg:py-32" id="services">
+    <section className="bg-beige py-20 lg:py-32" id="services">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <SectionHeading

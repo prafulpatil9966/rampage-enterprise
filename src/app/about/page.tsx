@@ -39,8 +39,8 @@ export default function AboutPage() {
 
           <Reveal delay={0.1} className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
             <Image
-              src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1400&auto=format&fit=crop"
-              alt="CCTV surveillance equipment representing the services offered by Rampage Enterprise"
+              src="/images/instagram/founder-portrait.jpg"
+              alt={`${company.founder}, founder of Rampage Enterprise`}
               fill
               sizes="(min-width: 1024px) 600px, 100vw"
               className="object-cover"
@@ -63,6 +63,39 @@ export default function AboutPage() {
               understanding the space and its specific requirements before
               recommending a suitable approach.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 lg:items-center">
+          <Reveal className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+            <Image
+              src="/images/instagram/surveillance-guards.webp"
+              alt="Real promotional graphic shared by Rampage Enterprise on Instagram"
+              fill
+              sizes="(min-width: 1024px) 600px, 100vw"
+              className="object-cover"
+            />
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <SectionHeading
+              label="Follow Our Work"
+              title="See it on Instagram."
+            />
+            <p className="mt-8 max-w-md text-base leading-relaxed text-grey">
+              &ldquo;{company.bio}&rdquo;
+            </p>
+            <a
+              href={company.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-taupe transition-colors hover:text-taupe-dark"
+            >
+              @rampage.enterprise
+              <span aria-hidden>→</span>
+            </a>
           </Reveal>
         </div>
       </section>
