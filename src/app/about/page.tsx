@@ -43,7 +43,7 @@ export default function AboutPage() {
               alt={`${company.founder}, founder of Rampage Enterprise`}
               fill
               sizes="(min-width: 1024px) 600px, 100vw"
-              className="object-cover"
+              className="object-cover grayscale"
             />
           </Reveal>
         </div>
