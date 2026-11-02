@@ -9,7 +9,7 @@ export function Industries() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <SectionHeading
-            label="04 / Where We Protect"
+            label="03 / Where We Protect"
             title="Spaces we help safeguard."
           />
         </Reveal>

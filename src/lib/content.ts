@@ -23,7 +23,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Our Approach", href: "/#approach" },
+  { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -88,35 +88,6 @@ export const services: Service[] = [
 ];
 
 
-export type ApproachStep = {
-  number: string;
-  title: string;
-  description: string;
-};
-
-export const approachSteps: ApproachStep[] = [
-  {
-    number: "01",
-    title: "Understand",
-    description: "Understand the location, environment and security requirements.",
-  },
-  {
-    number: "02",
-    title: "Assess",
-    description: "Identify the relevant surveillance or security needs.",
-  },
-  {
-    number: "03",
-    title: "Plan",
-    description: "Recommend a suitable service approach based on the requirements.",
-  },
-  {
-    number: "04",
-    title: "Execute",
-    description: "Coordinate the selected installation or security service.",
-  },
-];
-
 export type Space = {
   title: string;
   image: string;
@@ -142,5 +113,38 @@ export const spaces: Space[] = [
     title: "Commercial Spaces",
     image:
       "https://images.unsplash.com/photo-1543892607-04657ef3a279?q=80&w=1400&auto=format&fit=crop",
+  },
+];
+
+export type EventMedia = {
+  type: "image" | "video";
+  // For images: a direct image URL. For videos: a direct video file URL (e.g. .mp4) or an embeddable URL.
+  src: string;
+  caption: string;
+  // Only used for videos: an image shown before playback.
+  poster?: string;
+};
+
+// Placeholder gallery — replace with real photos/videos from past Rampage Enterprise events.
+export const eventGallery: EventMedia[] = [
+  {
+    type: "image",
+    src: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=1600&auto=format&fit=crop",
+    caption: "Event security coverage at a large public gathering",
+  },
+  {
+    type: "image",
+    src: "https://images.unsplash.com/photo-1552622594-f27a9f6103a3?q=80&w=1600&auto=format&fit=crop",
+    caption: "Guards stationed at an event entry point",
+  },
+  {
+    type: "image",
+    src: "https://images.unsplash.com/photo-1690992375579-0a91942e9dc3?q=80&w=1600&auto=format&fit=crop",
+    caption: "Club security team on duty",
+  },
+  {
+    type: "image",
+    src: "https://images.unsplash.com/photo-1543892607-04657ef3a279?q=80&w=1600&auto=format&fit=crop",
+    caption: "Corporate event security briefing",
   },
 ];
