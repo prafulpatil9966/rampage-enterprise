@@ -3,6 +3,7 @@ import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgressCircle } from "@/components/ui/ScrollProgressCircle";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ScrollProgressCircle />
       </body>
     </html>
   );
