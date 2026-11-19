@@ -3,13 +3,22 @@ import { type NextRequest, NextResponse } from "next/server";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+let warnedMissingConfig = false;
 
 export async function updateSession(request: NextRequest) {
-  if (!supabaseUrl || !supabaseKey) {
-    throw new Error("Supabase URL and publishable key must be configured.");
-  }
-
   let supabaseResponse = NextResponse.next({ request });
+
+  if (!supabaseUrl || !supabaseKey) {
+    if (!warnedMissingConfig) {
+      console.warn(
+        "Supabase session refresh is disabled: set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, then redeploy.",
+      );
+      warnedMissingConfig = true;
+    }
+
+    // This proxy only refreshes sessions; it does not authorize requests.
+    return supabaseResponse;
+  }
 
   const supabase = createServerClient(supabaseUrl, supabaseKey, {
     cookies: {

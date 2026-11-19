@@ -47,6 +47,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In your Vercel project, open **Settings > Environment Variables** and add both variables from your local `.env.local`:
+
+| Variable | Value |
+| --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | The publishable key from the same Supabase project |
+
+Select **Production** for the live site and **Preview** if preview deployments need Supabase. Do not use a secret or service-role key. Redeploy after saving so the next build picks up the values; `.env.local` is not deployed from Git.
+
+Without these variables, public pages still load, but session refresh is disabled and the contact form cannot save enquiries. To enable submissions, apply the [contact enquiries migration](./supabase/migrations/20261119123700_create_contact_enquiries.sql) to the same Supabase project.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
