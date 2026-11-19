@@ -58,4 +58,27 @@ Select **Production** for the live site and **Preview** if preview deployments n
 
 Without these variables, public pages still load, but session refresh is disabled and the contact form cannot save enquiries. To enable submissions, apply the [contact enquiries migration](./supabase/migrations/20261119123700_create_contact_enquiries.sql) to the same Supabase project.
 
+## Event admin panel
+
+Apply [the event gallery migration](./supabase/migrations/20261119153000_create_event_gallery.sql) to the same Supabase project. It creates the events and media tables, the public event-media storage bucket, and row-level security policies.
+
+Before a user can access `/admin`, create the account in Supabase Auth and add this row to `public.admin_profiles` (replace the ID with the Supabase Auth user ID):
+
+```sql
+insert into public.admin_profiles (id, is_admin)
+values ('00000000-0000-0000-0000-000000000000', true);
+``` To enable submissions, apply the [contact enquiries migration](./supabase/migrations/20261119123700_create_contact_enquiries.sql) to the same Supabase project.
+
+## Daily Supabase keepalive
+
+The [daily keepalive workflow](./.github/workflows/supabase_keepalive.yml) runs once per day and when started manually. In the GitHub repository, open **Settings → Secrets and variables → Actions** and add these repository secrets:
+
+| Secret | Value |
+| --- | --- |
+| `SITE_URL` | Deployed website URL, for example `https://your-domain.com` |
+| `SUPABASE_URL` | The `NEXT_PUBLIC_SUPABASE_URL` value |
+| `SUPABASE_PUBLISHABLE_KEY` | The `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` value |
+
+The workflow calls `/api/health` and then the Supabase REST API directly. GitHub Actions may not run scheduled jobs when a repository is disabled or inactive, and the workflow cannot wake a project that Supabase has already paused. Supabase also controls platform pause rules, so this is a best-effort keepalive rather than a guaranteed pause prevention mechanism. To enable submissions, apply the [contact enquiries migration](./supabase/migrations/20261119123700_create_contact_enquiries.sql) to the same Supabase project.
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

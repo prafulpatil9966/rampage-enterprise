@@ -11,10 +11,15 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "nchpqoeeajujyzeertih.supabase.co",
+      },
     ],
   },
   experimental: {
     agentUpgrade: "security",
+    proxyClientMaxBodySize: "1gb",
   },
   turbopack: {
     rules: {

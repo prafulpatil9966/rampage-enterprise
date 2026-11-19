@@ -1,0 +1,41 @@
+name: Daily Supabase keepalive
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Ping deployed health endpoint
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          if [ -z "$SITE_URL" ]; then
+            echo "SITE_URL repository secret is not configured."
+            exit 1
+          fi
+
+          curl --fail-with-body --retry 3 --retry-delay 10 \
+            --max-time 30 \
+            "${SITE_URL%/}/api/health"
+
+      - name: Ping Supabase directly
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_PUBLISHABLE_KEY" ]; then
+            echo "SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY repository secrets are required."
+            exit 1
+          fi
+
+          curl --fail-with-body --retry 3 --retry-delay 10 \
+            --max-time 30 \
+            -H "apikey: $SUPABASE_PUBLISHABLE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_PUBLISHABLE_KEY" \
+            "${SUPABASE_URL%/}/rest/v1/events?select=id&limit=1"
