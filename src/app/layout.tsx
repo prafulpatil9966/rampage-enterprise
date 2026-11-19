@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgressCircle } from "@/components/ui/ScrollProgressCircle";
+import { RecoveryRedirect } from "@/components/auth/RecoveryRedirect";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
+        <RecoveryRedirect />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "@/lib/content";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -22,6 +24,10 @@ export function Navbar() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
 
   return (
     <header
