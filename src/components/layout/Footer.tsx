@@ -1,9 +1,17 @@
 import Link from "next/link";
 import { company, contactInfo, navLinks, services } from "@/lib/content";
+import { ReachOutLinks } from "@/components/layout/ReachOut";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-beige">
+      <div className="bg-ink px-6 py-10 text-cream lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="font-display text-3xl sm:text-4xl">Reach Out to Us</h2>
+          <ReachOutLinks light />
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>

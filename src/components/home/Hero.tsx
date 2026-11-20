@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { company } from "@/lib/content";
+import { ReachOutLinks } from "@/components/layout/ReachOut";
 
 export function Hero() {
   return (
@@ -37,6 +38,13 @@ export function Hero() {
               Discuss Your Security Needs
             </Button>
           </div>
+        </div>
+
+        <div className="mt-8 flex items-center justify-between border-t border-border pt-6 lg:mt-10">
+          <p className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-taupe sm:block">
+            Reach Out to Us
+          </p>
+          <ReachOutLinks />
         </div>
 
         <div className="relative mt-16 aspect-[16/9] w-full overflow-hidden rounded-[2rem] lg:aspect-[21/9]">
