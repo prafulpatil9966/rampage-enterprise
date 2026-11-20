@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
 import { AdminEvents } from "@/components/admin/AdminEvents";
 
+export const dynamic = "force-dynamic";
+
 type EventRecord = {
   id: string;
   title: string;
