@@ -37,6 +37,7 @@ function MailIcon() {
 }
 
 const phoneNumber = contactInfo.phone.replace(/\D/g, "");
+const whatsappMessage = "Hi Rampage Enterprise, I would like to inquire about your services.";
 
 export function ReachOutLinks({ light = false }: { light?: boolean }) {
   const linkClass = light
@@ -55,7 +56,7 @@ export function ReachOutLinks({ light = false }: { light?: boolean }) {
         <InstagramIcon />
       </a>
       <a
-        href={`https://wa.me/${phoneNumber}`}
+        href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Rampage Enterprise on WhatsApp"
@@ -82,4 +83,3 @@ export function ReachOutLinks({ light = false }: { light?: boolean }) {
     </div>
   );
 }
-
