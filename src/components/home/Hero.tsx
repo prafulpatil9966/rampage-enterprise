@@ -49,8 +49,10 @@ export function Hero() {
 
         <div className="relative mt-16 aspect-[16/9] w-full overflow-hidden rounded-[2rem] lg:aspect-[21/9]">
           <Image
-            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop"
-            alt="CCTV surveillance camera mounted for professional security monitoring"
+            // src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop"
+            // alt="CCTV surveillance camera mounted for professional security monitoring"
+              src="https://images.unsplash.com/photo-1485230405346-71acb9518d9c?q=80&w=2000&auto=format&fit=crop"
+            alt="Security guard standing in a commercial lobby"
             fill
             priority
             sizes="(min-width: 1024px) 1200px, 100vw"
