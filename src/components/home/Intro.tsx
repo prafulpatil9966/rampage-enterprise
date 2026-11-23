@@ -5,8 +5,8 @@ import { company } from "@/lib/content";
 
 export function Intro() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-14 sm:py-20 lg:px-10 lg:py-32">
-      <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+    <section className="bg-beige py-14 sm:py-20 lg:py-32">
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <Reveal>
           <SectionHeading
             label="01 / Who We Are"

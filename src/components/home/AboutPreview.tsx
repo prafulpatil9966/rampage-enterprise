@@ -6,8 +6,8 @@ import { company } from "@/lib/content";
 
 export function AboutPreview() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-32">
-      <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 lg:items-center">
+    <section className="bg-cream py-14 lg:py-32">
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:items-center lg:px-10">
         <Reveal className="relative order-2 aspect-[4/5] overflow-hidden rounded-[2rem] lg:order-1">
           <Image
             src="https://images.unsplash.com/photo-1543892607-04657ef3a279?q=80&w=1400&auto=format&fit=crop"
