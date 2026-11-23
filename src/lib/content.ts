@@ -125,26 +125,55 @@ export type EventMedia = {
   poster?: string;
 };
 
-// Placeholder gallery — replace with real photos/videos from past Rampage Enterprise events.
-export const eventGallery: EventMedia[] = [
+export type EventGallery = {
+  title: string;
+  description: string;
+  media: EventMedia[];
+};
+
+export const eventGallery: EventGallery[] = [
   {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=1600&auto=format&fit=crop",
-    caption: "Event security coverage at a large public gathering",
+    title: "Korakenda Garba Event 2026",
+    description:
+      "Provide security and crowd management services for Korakenda Garba Event 2026.",
+    media: [
+      {
+        type: "video",
+        src: "/images/events/AQPlRu8YMZcP1-T3grsyTWx4kY5oxuRBw0tehV5mRX-yvbPTNTBxf8VUGlZd6hzmPiXlGRVOMHginBMTkvxLlu1_6ai2I4Xhow6cjAM.mp4",
+        caption: "Korakenda Garba Event 2026",
+      },
+      {
+        type: "video",
+        src: "/images/events/AQPbp4YlltQP-2zx3tizAD9-SIqxO1ejTICoB4s7u8H-yLsWGZ2ICp7U2dIgHzhIOlRdLENwnCo9Byxm1taPON_fWpUOM8HFBVnqrGU.mp4",
+        caption: "Korakenda Garba Event 2026",
+      },
+      {
+        type: "video",
+        src: "/images/events/AQOo2dB_BaZ6YdMo2hra_TKQzvFtPceMK9IobO36XGTPS-hvJtfDC5ve0ZD9ziUq3ENsOrSEeitib8aPDhrHM0RRFJ5I2ojsTbt3Cjg.mp4",
+        caption: "Korakenda Garba Event 2026",
+      },
+    ],
   },
   {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1552622594-f27a9f6103a3?q=80&w=1600&auto=format&fit=crop",
-    caption: "Guards stationed at an event entry point",
-  },
-  {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1690992375579-0a91942e9dc3?q=80&w=1600&auto=format&fit=crop",
-    caption: "Club security team on duty",
-  },
-  {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1543892607-04657ef3a279?q=80&w=1600&auto=format&fit=crop",
-    caption: "Corporate event security briefing",
+    title: "Korakendra Garba Event 2025",
+    description:
+      "Security and crowd management coverage for Korakendra Garba Event 2025.",
+    media: [
+      {
+        type: "video",
+        src: "/images/events/AQNR13UjSgKurjBlgfsNEFnXQicoECKhNnivZEjpa_JRE2b_Wfb3eXpFAswvxXNGSNGQRXMlIglr_njo5vhQdD8saXP49mj64GfsRQM.mp4",
+        caption: "Korakendra Garba Event 2025",
+      },
+      {
+        type: "video",
+        src: "/images/events/AQNkHBFZKHAOJWiV4LWW8AITR62JGRjo7mSdRyjjyfsc_wNjrnpYkyjnyRCuGm_dr_2h17DspSovFqZwx6RCd3Zykbljp-eRoA6ONsY.mp4",
+        caption: "Korakendra Garba Event 2025",
+      },
+      {
+        type: "video",
+        src: "/images/events/AQOo2dB_BaZ6YdMo2hra_TKQzvFtPceMK9IobO36XGTPS-hvJtfDC5ve0ZD9ziUq3ENsOrSEeitib8aPDhrHM0RRFJ5I2ojsTbt3Cjg (1).mp4",
+        caption: "Korakendra Garba Event 2025",
+      },
+    ],
   },
 ];

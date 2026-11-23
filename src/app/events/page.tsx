@@ -21,38 +21,48 @@ export default function EventsPage() {
         imageAlt="Rampage Enterprise security team at an event"
       />
 
-      <div className="mx-auto max-w-7xl px-6 pb-24 lg:px-10 lg:pb-32">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {eventGallery.map((item, i) => (
-            <Reveal
-              key={item.src}
-              delay={i * 0.06}
-              className="group relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-beige"
-            >
-              {item.type === "video" ? (
-                <video
-                  src={item.src}
-                  poster={item.poster}
-                  controls
-                  playsInline
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <Image
-                  src={item.src}
-                  alt={item.caption}
-                  fill
-                  sizes="(min-width: 1024px) 400px, 100vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-              )}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-              <p className="pointer-events-none absolute bottom-5 left-5 right-5 text-sm font-medium text-cream">
-                {item.caption}
+      <div className="mx-auto max-w-7xl space-y-20 px-6 pb-24 lg:px-10 lg:pb-32">
+        {eventGallery.map((event) => (
+          <section key={event.title} className="border-t border-border pt-10">
+            <Reveal>
+              <h2 className="font-display text-4xl leading-tight text-ink sm:text-5xl">
+                {event.title}
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-grey">
+                {event.description}
               </p>
             </Reveal>
-          ))}
-        </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {event.media.map((item, i) => (
+                <Reveal
+                  key={item.src}
+                  delay={i * 0.06}
+                  className="group relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-beige"
+                >
+                  {item.type === "video" ? (
+                    <video
+                      src={item.src}
+                      poster={item.poster}
+                      controls
+                      preload="metadata"
+                      playsInline
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={item.src}
+                      alt={item.caption}
+                      fill
+                      sizes="(min-width: 1024px) 400px, 100vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                  )}
+                </Reveal>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </>
   );

@@ -22,7 +22,7 @@ export default function AboutPage() {
         imageAlt="Commercial building exterior representing Rampage Enterprise's area of operation"
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <section className="mx-auto max-w-7xl px-6 pb-14 lg:px-10 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 lg:items-center">
           <Reveal>
             <SectionHeading
@@ -49,7 +49,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-beige py-20 lg:py-28">
+      <section className="bg-beige py-14 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
             <SectionHeading
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      {/* <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 lg:items-center">
           <Reveal className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
             <Image
@@ -98,7 +98,7 @@ export default function AboutPage() {
             </a>
           </Reveal>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

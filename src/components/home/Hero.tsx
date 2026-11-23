@@ -5,7 +5,7 @@ import { ReachOutLinks } from "@/components/layout/ReachOut";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-10 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-28">
+    <section className="relative overflow-hidden pt-28 pb-10 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-28">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(20,16,12,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(20,16,12,0.05)_1px,transparent_1px)] bg-[size:64px_64px]"

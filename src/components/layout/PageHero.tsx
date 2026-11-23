@@ -10,7 +10,7 @@ type PageHeroProps = {
 
 export function PageHero({ label, title, description, image, imageAlt }: PageHeroProps) {
   return (
-    <section className="pt-36 pb-16 lg:pt-44 lg:pb-20">
+    <section className="pt-28 pb-16 lg:pt-44 lg:pb-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-taupe">
           <span className="h-px w-8 bg-taupe" aria-hidden />
